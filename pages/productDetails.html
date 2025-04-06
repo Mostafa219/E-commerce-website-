@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/productDetails.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light px-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="../assets/logo.svg"
+              width="30"
+              alt="Logo"
+              class="me-2 logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarContent"
+          >
+            <div class="navbar-nav gap-2 my-2" id="navButtons">
+              <button
+                class="nav-btn me-2 btn btn-outline-secondary"
+                id="home-pd"
+              >
+                Home
+              </button>
+              <button
+                class="nav-btn btn btn-outline-secondary"
+                id="products-pd"
+              >
+                Products
+              </button>
+              <button class="nav-btn btn btn-outline-secondary" id="about-pd">
+                About Us
+              </button>
+            </div>
+
+            <div
+              class="navbar-text mx-auto text-center fw-bold"
+              id="welcomeMessage"
+            >
+              Welcome to Our Store!
+            </div>
+
+            <div
+              class="d-flex align-items-center justify-content-center mt-3 mt-lg-0 gap-3"
+            >
+              <div id="themeSwitcher" class="switch-wrapper">
+                <div class="switch" id="switchBtn"></div>
+                <span class="theme-label" id="themeText">Dark Mode</span>
+              </div>
+
+              <button class="cart-btn" id="cart-pd">
+                <img src="../assets/cart.svg" alt="Cart" />
+              </button>
+
+              <button class="contact-btn" id="contact-pd">
+                Contact Support
+              </button>
+
+              <button id="authButton" class="btn">Login</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <!-- Alert -->
+      <div class="alert alert-success d-none" id="aler">
+        <div class="d-flex flex-column align-items-center">
+          <i class="fas fa-check mb-2"></i>
+          <p class="mb-0">Added to cart</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Product Image -->
+        <div
+          class="col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+        >
+          <div class="img-prodect text-center">
+            <img
+              id="mainProductImg"
+              src=""
+              alt="Product Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+          <div class="mb-3 d-flex justify-content-between align-items-center">
+            <h2 class="h5" id="title">Product Title</h2>
+            <span class="badge bg-warning text-dark">12 Left!</span>
+          </div>
+
+          <p class="text-muted" id="brand">Brand Name</p>
+          <p class="h4 text-danger" id="price">$69.99</p>
+          <p id="description" class="mb-3">Product description goes here...</p>
+
+          <div class="mb-4">
+            <button class="btn btn-primary me-2" id="buyNow">
+              <i class="fa-solid fa-bag-shopping me-1"></i> Buy Now
+            </button>
+            <button class="btn btn-outline-secondary" id="addToCart">
+              <i class="fa-solid fa-cart-shopping me-1"></i> Add To Cart
+            </button>
+          </div>
+
+          <!-- Additional Details -->
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="fw-bold mb-1">Material</p>
+              <p class="text-muted">High-Quality Denim (100% Cotton)</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="fw-bold mb-1">Fit</p>
+              <p class="text-muted">Classic Fit</p>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-sm-6">
+              <p class="fw-bold mb-1">Color</p>
+              <div class="d-flex gap-2">
+                <div
+                  class="rounded-circle bg-primary"
+                  style="width: 25px; height: 25px"
+                ></div>
+                <div
+                  class="rounded-circle bg-pink"
+                  style="width: 25px; height: 25px"
+                ></div>
+                <div
+                  class="rounded-circle bg-success"
+                  style="width: 25px; height: 25px"
+                ></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <p class="fw-bold mb-1">Sizes</p>
+              <div class="d-flex gap-2">
+                <span class="badge bg-light border">S</span>
+                <span class="badge bg-primary">M</span>
+                <span class="badge bg-light border">XL</span>
+                <span class="badge bg-light border">XXL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Info -->
+          <div class="mt-4">
+            <h5>Shipping Information</h5>
+            <ul class="list-unstyled">
+              <li>Standard shipping: <strong>3-5 business days</strong></li>
+              <li>Express shipping options available at checkout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="evaluation-section py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">What Our Customers Say</h2>
+        <div class="row g-4">
+          <!-- Start Review Card -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="evaluation-card p-4 shadow rounded-4 h-100">
+              <div class="person d-flex align-items-center mb-3">
+                <img
+                  class="person-img rounded-circle me-3"
+                  src="../imge/person.png"
+                  alt="person"
+                />
+                <div>
+                  <p class="name fw-bold mb-1 fs-5">Alex M</p>
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="subpar review-text">
+                Absolutely love this denim jacket! The fit is perfect, and the
+                distressed detailing gives it a rugged yet stylish look. Highly
+                recommend!
+              </p>
+            </div>
+          </div>
+
+          <!-- Repeat for 3 more reviews -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="evaluation-card p-4 shadow rounded-4 h-100">
+              <div class="person d-flex align-items-center mb-3">
+                <img
+                  class="person-img rounded-circle me-3"
+                  src="../imge/person.png"
+                  alt="person"
+                />
+                <div>
+                  <p class="name fw-bold mb-1 fs-5">Sara K</p>
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="subpar review-text">
+                Great quality and super comfy. I get compliments every time I
+                wear it. Will definitely buy again from here!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="evaluation-card p-4 shadow rounded-4 h-100">
+              <div class="person d-flex align-items-center mb-3">
+                <img
+                  class="person-img rounded-circle me-3"
+                  src="../imge/person.png"
+                  alt="person"
+                />
+                <div>
+                  <p class="name fw-bold mb-1 fs-5">John D</p>
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="subpar review-text">
+                Good jacket for the price. Fit is fine, delivery was fast. Not a
+                fan of the zipper, but overall satisfied.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="evaluation-card p-4 shadow rounded-4 h-100">
+              <div class="person d-flex align-items-center mb-3">
+                <img
+                  class="person-img rounded-circle me-3"
+                  src="../imge/person.png"
+                  alt="person"
+                />
+                <div>
+                  <p class="name fw-bold mb-1 fs-5">Lina S</p>
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="subpar review-text">
+                Perfect in every way! From the packaging to the quality, it
+                exceeded my expectations. Thank you!
+              </p>
+            </div>
+          </div>
+          <!-- End Review Cards -->
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="subscibe-part">
+          <div class="logo-img-footer">
+            <img src="../assets/logo.svg" alt="" />
+          </div>
+          <div class="sub">
+            <input
+              class="con-email"
+              type="email"
+              placeholder="Enter your Email "
+            />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+        <div class="f-home">
+          <h2>Home</h2>
+          <p><a href="#">Products</a></p>
+          <p><a href="#">Cart</a></p>
+          <p><a href="#">Cotact Support</a></p>
+        </div>
+        <div class="f-tv">
+          <h2>TV</h2>
+          <p><a href="#">Sumsung</a></p>
+          <p><a href="#">Lg</a></p>
+          <p><a href="#">Tornado</a></p>
+        </div>
+        <div class="f-labtob">
+          <h2>Laptop</h2>
+          <p><a href="#">HP</a></p>
+          <p><a href="#">Lenovo</a></p>
+          <p><a href="#">Dell</a></p>
+        </div>
+        <div class="f-mobile">
+          <h2>Mobile</h2>
+          <p><a href="#">Iphone</a></p>
+          <p><a href="#">Sumsung</a></p>
+          <p><a href="#">Realme</a></p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <p><a href="#">Terms & Conditions</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <div class="social-icons">
+          <a href="#"><i class="bx bxl-google"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <p class="copyrights">
+          &copy; Copyrights for <span>ITI</span> 2025, All Rights reserved
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="../js/productDetails.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

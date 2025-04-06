@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- and css  -->
+
+    <link rel="stylesheet" href="../css/logandreg.css" />
+    <link rel="stylesheet" href="../css/logandregMedia.css" />
+    <title>Login and Register</title>
+  </head>
+  <body>
+    <div class="hero-container">
+      <div class="regcontainer">
+        <div class="form-box login">
+          <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+              <input id="logEmail" type="email" placeholder="Email" required />
+              <i class="bx bxs-envelope"></i>
+            </div>
+            <div class="input-box">
+              <input
+                id="logPassword"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <i
+                onclick="togglePassword()"
+                class="showPass fa-solid fa-eye"
+              ></i>
+            </div>
+            <div class="forget-link">
+              <a href="#">forget password?</a>
+            </div>
+            <button onclick="login(event)" type="submit" class="Btn">
+              login
+            </button>
+            <p>or login with your social platforms</p>
+            <div class="social-icons">
+              <a href="#"><i class="bx bxl-google"></i></a>
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-github"></i></a>
+              <a href="#"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </form>
+        </div>
+        <div class="form-box register">
+          <form action="">
+            <h1>Register</h1>
+            <div class="input-box">
+              <input
+                id="regName"
+                type="text"
+                placeholder="Full name"
+                required
+              />
+              <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+              <input id="regEmail" type="email" placeholder="Email" required />
+              <i class="bx bxs-envelope"></i>
+            </div>
+            <div class="input-box">
+              <input
+                id="regPassword"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <i
+                onclick="togglePassword()"
+                class="showPass fa-solid fa-eye"
+              ></i>
+            </div>
+
+            <button onclick="register(event)" type="submit" class="Btn">
+              Register
+            </button>
+            <p>or register with your social platforms</p>
+            <div class="social-icons">
+              <a href="#"><i class="bx bxl-google"></i></a>
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-github"></i></a>
+              <a href="#"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </form>
+        </div>
+        <div class="toggle-box">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Don't have an account?</p>
+            <button class="Btn register-btn">Register</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello, Welcome!</h1>
+            <p>Allready have an account?</p>
+            <button class="Btn login-btn">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/logandreg.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

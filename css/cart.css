@@ -1,0 +1,175 @@
+/* --- Light Mode --- */
+:root {
+  --primary-color: #ffd500;
+  --secondary-color: #ffee99;
+  --remove-btn-color: #dc3545;
+  --font-color: #1a1a1a;
+  --input-background: #eee;
+  --text-color-inputs: #333;
+  --background-color: #f7f7f8;
+  --linbackground1-color: #f7efca;
+  --linbackground2-color: #f8e587;
+  --white-background: #ffffff;
+}
+
+/* --- Dark Mode --- */
+body.darkmode {
+  --primary-color: #ffd500;
+  --secondary-color: #333333;
+  --remove-btn-color: #dc3545;
+  --font-color: #f1f1f1;
+  --input-background: black;
+  --text-color-inputs: #fffdfd;
+  --background-color: #121212;
+  --white-background: #121212;
+  --linbackground1-color: #2b2821;
+  --linbackground2-color: #9c871a;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: "Manrope", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.darkmode {
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--white-background) !important;
+  color: var(--font-color);
+}
+
+body.darkmode .navbar {
+  background-color: var(--white-background) !important;
+  color: var(--font-color);
+}
+
+/* --- Cart Section --- */
+body.darkmode .cart-content,
+body.darkmode .cart-total-title,
+body.darkmode .cheackout,
+body.darkmode .btn-checkout {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+body.darkmode .btn-checkout {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+body.darkmode .btn-checkout:hover {
+  background-color: var(--secondary-color);
+}
+
+#welcomeMessage {
+  color: var(--font-color) !important;
+}
+
+/* General Styles */
+.cart-content,
+.cart-total-title {
+  background-color: var(--white-background);
+  color: var(--font-color);
+}
+
+#contact-c {
+  background-color: var(--primary-color) !important;
+  color: var(--font-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#contact-c:hover {
+  background-color: var(--linbackground2-color) !important;
+  color: var(--white-background) !important;
+}
+
+#navButtons button {
+  color: var(--text-color-inputs);
+  transition: color 0.3s ease;
+  border-radius: 20px;
+  padding: 8px 16px;
+  background-color: var(--white-background);
+  outline: none;
+}
+
+#navButtons button:hover {
+  border: none;
+  background-color: var(--linbackground2-color);
+  color: var(--text-color-inputs);
+}
+
+#cart-c,
+#authButton {
+  background-color: var(--primary-color) !important;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color-inputs);
+}
+
+#cart-c:hover,
+#authButton:hover {
+  background-color: var(--linbackground2-color) !important;
+  color: var(--white-background);
+}
+
+/* Cart Button & Remove Button */
+.cart-item-quantity-btn {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+.cart-item-quantity-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.cart-btn-remove {
+  outline: none;
+  border: var(--remove-btn-color) 1px solid;
+  cursor: pointer;
+  color: var(--remove-btn-color);
+  background-color: transparent;
+}
+
+.cart-btn-remove:hover {
+  background-color: var(--remove-btn-color);
+  color: white;
+}
+
+.btn-checkout {
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+.btn-checkout:hover {
+  background-color: var(--linbackground2-color);
+  color: var(--white-background);
+}
+
+#decrement,
+#increment {
+  border: none;
+  outline: none;
+}
+
+/* --- Main Section --- */
+main {
+  background-color: var(--white-background);
+  color: var(--font-color);
+}

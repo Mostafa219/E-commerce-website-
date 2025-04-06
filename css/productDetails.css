@@ -1,0 +1,219 @@
+:root {
+  --main-color: #ffd400;
+  --white-background: #fff;
+  --text-color-inputs: #333;
+  --icons-placeholder-colors: #888;
+  --bordericon-color: #ccc;
+  --linbackground1-color: #f7efca;
+  --linbackground2-color: #f8e587;
+}
+
+/* --- Dark Mode --- */
+body.darkmode {
+  --main-color: #ffd400;
+  --white-background: #413f3f;
+  --input-background: #181616;
+  --text-color-inputs: #fffdfd;
+  --icons-placeholder-colors: #ffffff;
+  --bordericon-color: #fffefe;
+  --linbackground1-color: #2b2821;
+  --linbackground2-color: #9c871a;
+}
+
+/* General Page Styling */
+
+body {
+  background-color: var(--white-background);
+  color: var(--text-color-inputs);
+}
+
+.navbar {
+  background-color: var(--white-background) !important;
+}
+
+.dark-mode .navbar {
+  background-color: var(--white-background) !important;
+}
+
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s;
+}
+
+.switch.active {
+  background: var(--main-color);
+}
+
+.switch.active::before {
+  transform: translateX(30px);
+}
+
+.theme-label {
+  font-weight: 500;
+}
+
+.dark-mode .modal-content {
+  background-color: var(--input-background);
+  color: var(--text-color-inputs);
+}
+
+.navbar img[alt="Cart"] {
+  width: 20px;
+  height: 20px;
+}
+
+#welcomeMessage {
+  color: var(--text-color-inputs);
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    justify-content: center !important;
+  }
+
+  .navbar-text,
+  .navbar-nav,
+  .d-flex.align-items-center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .d-flex.align-items-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.person-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.subpar {
+  font-size: 15px;
+}
+
+/* Headings and Paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul li,
+a {
+  color: var(--text-color-inputs);
+  transition: color 0.3s ease;
+}
+
+/* Containers */
+.container,
+.bg-light,
+.bg-white,
+.card,
+.alert,
+.part1,
+.part2,
+.part3 {
+  color: var(--text-color-inputs);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Buttons */
+button#buyNow,
+button#addToCart {
+  background-color: var(--main-color);
+  color: var(--text-color-inputs);
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button#buyNow:hover,
+button#addToCart:hover {
+  background-color: var(--linbackground2-color);
+  color: var(--white-background);
+}
+
+#contact-pd {
+  background-color: var(--main-color);
+  border: none;
+  color: var(--text-color-inputs);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact-pd:hover {
+  background-color: var(--linbackground2-color);
+  color: var(--white-background);
+}
+
+#navButtons button {
+  color: var(--text-color-inputs);
+  transition: color 0.3s ease;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+#navButtons button:hover {
+  color: var(--white-background);
+}
+
+#authButton {
+  background-color: var(--main-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text-color-inputs);
+}
+
+#authButton:hover {
+  background-color: var(--linbackground2-color);
+  color: var(--white-background);
+}
+
+#cart-pd {
+  background-color: var(--main-color);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color-inputs);
+}
+
+#cart-pd:hover {
+  background-color: var(--linbackground2-color);
+  color: var(--white-background);
+}

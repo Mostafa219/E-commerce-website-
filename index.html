@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link bootstrap css file -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- link css file -->
+    <link rel="stylesheet" href="/css/products.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light px-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="/assets/logo.svg"
+              width="30"
+              alt="Logo"
+              class="me-2 logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarContent"
+          >
+            <div class="navbar-nav gap-2 my-2" id="navButtons">
+              <button
+                class="nav-btn me-2 btn btn-outline-secondary"
+                id="home-h"
+              >
+                Home
+              </button>
+              <button class="nav-btn btn btn-outline-secondary" id="products-h">
+                Products
+              </button>
+              <button class="nav-btn btn btn-outline-secondary" id="about-h">
+                About Us
+              </button>
+            </div>
+
+            <div
+              class="navbar-text mx-auto text-center fw-bold"
+              id="welcomeMessage"
+            >
+              Welcome to Our Store!
+            </div>
+
+            <div
+              class="d-flex align-items-center justify-content-center mt-3 mt-lg-0 gap-3"
+            >
+              <div id="themeSwitcher" class="switch-wrapper">
+                <div class="switch" id="switchBtn"></div>
+                <span class="theme-label" id="themeText">Dark Mode</span>
+              </div>
+
+              <button class="cart-btn" id="cart-h">
+                <img src="/assets/cart.svg" alt="Cart" />
+              </button>
+
+              <button class="contact-btn" id="contact-h">
+                Contact Support
+              </button>
+
+              <button id="authButton" class="btn">Login</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel w-100 mt-2"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imge/sliderimgs/s1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="imge/sliderimgs/s2.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="imge/sliderimgs/s3.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="imge/sliderimgs/s4.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="imge/sliderimgs/s5.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+    </div>
+    <main class="container">
+      <section class="prooudct-content">
+        <div
+          class="d-flex justify-content-center align-items-center vh-75 mt-5"
+        >
+          <div
+            class="btn-group p-2 bg-white rounded-pill shadow-sm d-flex flex-wrap flex-md-nowrap gap-2 gap-md-3"
+            role="group"
+          >
+            <!-- TV -->
+            <input
+              type="radio"
+              class="btn-check category_btn"
+              name="category"
+              value="tv"
+              id="tv"
+              autocomplete="off"
+              checked
+            />
+            <label
+              class="btn btn-light rounded-pill py-2 px-4 fs-5 d-flex align-items-center w-100 w-md-auto"
+              for="tv"
+            >
+              <img src="/assets/tv.svg" alt="TV" width="24" class="me-2" /> TV
+            </label>
+
+            <!-- Audio -->
+            <input
+              type="radio"
+              class="btn-check category_btn"
+              name="category"
+              value="audio"
+              id="audio"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-light rounded-pill py-2 px-4 fs-5 d-flex align-items-center w-100 w-md-auto"
+              for="audio"
+            >
+              <img
+                src="/assets/audio.svg"
+                alt="Audio"
+                width="24"
+                class="me-2"
+              />
+              Audio
+            </label>
+
+            <!-- Laptop -->
+            <input
+              type="radio"
+              class="btn-check category_btn"
+              name="category"
+              value="laptop"
+              id="laptop"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-light rounded-pill py-2 px-4 fs-5 d-flex align-items-center w-100 w-md-auto"
+              for="laptop"
+            >
+              <img
+                src="/assets/laptop.svg"
+                alt="Laptop"
+                width="24"
+                class="me-2"
+              />
+              Laptop
+            </label>
+
+            <!-- Mobile -->
+            <input
+              type="radio"
+              class="btn-check category_btn"
+              name="category"
+              value="mobile"
+              id="mobile"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-light rounded-pill py-2 px-4 fs-5 d-flex align-items-center w-100 w-md-auto"
+              for="mobile"
+            >
+              <img
+                src="/assets/mobile.svg"
+                alt="Mobile"
+                width="24"
+                class="me-2"
+              />
+              Mobile
+            </label>
+
+            <!-- Gaming -->
+            <input
+              type="radio"
+              class="btn-check category_btn"
+              name="category"
+              value="gaming"
+              id="gaming"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-light rounded-pill py-2 px-4 fs-5 d-flex align-items-center w-100 w-md-auto"
+              for="gaming"
+            >
+              <img
+                src="/assets/gaming.svg"
+                alt="Gaming"
+                width="24"
+                class="me-2"
+              />
+              Gaming
+            </label>
+
+            <!-- Appliances -->
+            <input
+              type="radio"
+              class="btn-check category_btn"
+              name="category"
+              value="appliances"
+              id="appliances"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-light rounded-pill py-2 px-4 fs-5 d-flex align-items-center w-100 w-md-auto"
+              for="appliances"
+            >
+              <img
+                src="/assets/appliances.svg"
+                alt="Appliances"
+                width="24"
+                class="me-2"
+              />
+              Appliances
+            </label>
+          </div>
+        </div>
+
+        <div class="container mt-4 position-relative slider-data">
+          <h4>Lorem ipsum dolor sit.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="slider-container">
+            <div class="slider d-flex"></div>
+          </div>
+          <div class="slider-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="evaluation-section py-5 mt-5">
+        <div class="container">
+          <h2 class="text-center mb-5 fw-bold">What Our Customers Say</h2>
+          <div class="row g-4">
+            <!-- Start Review Card -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="evaluation-card p-4 shadow rounded-4 h-100">
+                <div class="person d-flex align-items-center mb-3">
+                  <img
+                    class="person-img rounded-circle me-3"
+                    src="/imge/person.png"
+                    alt="person"
+                  />
+                  <div>
+                    <p class="name fw-bold mb-1 fs-5">Alex M</p>
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="subpar review-text">
+                  Absolutely love this denim jacket! The fit is perfect, and the
+                  distressed detailing gives it a rugged yet stylish look.
+                  Highly recommend!
+                </p>
+              </div>
+            </div>
+
+            <!-- Repeat for 3 more reviews -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="evaluation-card p-4 shadow rounded-4 h-100">
+                <div class="person d-flex align-items-center mb-3">
+                  <img
+                    class="person-img rounded-circle me-3"
+                    src="/imge/person.png"
+                    alt="person"
+                  />
+                  <div>
+                    <p class="name fw-bold mb-1 fs-5">Sara K</p>
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="subpar review-text">
+                  Great quality and super comfy. I get compliments every time I
+                  wear it. Will definitely buy again from here!
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="evaluation-card p-4 shadow rounded-4 h-100">
+                <div class="person d-flex align-items-center mb-3">
+                  <img
+                    class="person-img rounded-circle me-3"
+                    src="/imge/person.png"
+                    alt="person"
+                  />
+                  <div>
+                    <p class="name fw-bold mb-1 fs-5">John D</p>
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="subpar review-text">
+                  Good jacket for the price. Fit is fine, delivery was fast. Not
+                  a fan of the zipper, but overall satisfied.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="evaluation-card p-4 shadow rounded-4 h-100">
+                <div class="person d-flex align-items-center mb-3">
+                  <img
+                    class="person-img rounded-circle me-3"
+                    src="/imge/person.png"
+                    alt="person"
+                  />
+                  <div>
+                    <p class="name fw-bold mb-1 fs-5">Lina S</p>
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="subpar review-text">
+                  Perfect in every way! From the packaging to the quality, it
+                  exceeded my expectations. Thank you!
+                </p>
+              </div>
+            </div>
+            <!-- End Review Cards -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="subscibe-part">
+          <div class="logo-img-footer">
+            <img src="../assets/logo.svg" alt="" />
+          </div>
+          <div class="sub">
+            <input
+              class="con-email"
+              type="email"
+              placeholder="Enter your Email "
+            />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+        <div class="f-home">
+          <h2>Home</h2>
+          <p><a href="#">Products</a></p>
+          <p><a href="#">Cart</a></p>
+          <p><a href="#">Contact Support</a></p>
+        </div>
+        <div class="f-tv">
+          <h2>TV</h2>
+          <p><a href="#">Samsung</a></p>
+          <p><a href="#">LG</a></p>
+          <p><a href="#">Tornado</a></p>
+        </div>
+        <div class="f-laptop">
+          <h2>Laptop</h2>
+          <p><a href="#">HP</a></p>
+          <p><a href="#">Lenovo</a></p>
+          <p><a href="#">Dell</a></p>
+        </div>
+        <div class="f-mobile">
+          <h2>Mobile</h2>
+          <p><a href="#">iPhone</a></p>
+          <p><a href="#">Samsung</a></p>
+          <p><a href="#">Realme</a></p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <p><a href="#">Terms & Conditions</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <div class="social-icons">
+          <a href="#"><i class="bx bxl-google"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <p class="copyrights">
+          &copy; Copyrights for <span>ITI</span> 2025, All Rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- link js file -->
+    <script src="/js/index.js"></script>
+    <!-- <script src="/js/products.js"></script> -->
+    <!-- link bootstrap js file -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

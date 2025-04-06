@@ -1,0 +1,136 @@
+/* --- Light Mode --- */
+:root {
+  --primary-color: #ffd500;
+  --secondary-color: #ffee99;
+  --remove-btn-color: #dc3545;
+  --font-color: #1a1a1a;
+  --input-background: #eee;
+  --text-color-inputs: #333;
+  --background-color: #f7f7f8;
+  --linbackground1-color: #f7efca;
+  --linbackground2-color: #f8e587;
+  --white-background: #ffffff;
+}
+
+/* --- Dark Mode --- */
+body.darkmode {
+  --primary-color: #ffd500;
+  --secondary-color: #333333;
+  --remove-btn-color: #dc3545;
+  --font-color: #f1f1f1;
+  --input-background: black;
+  --text-color-inputs: #fffdfd;
+  --background-color: #121212;
+  --white-background: #121212;
+  --linbackground1-color: #2b2821;
+  --linbackground2-color: #9c871a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 50px;
+  background: var(--white-background);
+}
+
+.about h1 span {
+  color: var(--primary-color);
+}
+
+/* Mission & Vision */
+.mission-vision .container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 45%;
+  background: var(--white-background);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Values */
+.values {
+  background: var(--white-background);
+  padding: 50px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.card {
+  background: var(--primary-color);
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials {
+  background: var(--white-background);
+  padding: 50px;
+  text-align: center;
+}
+
+.testimonial-box {
+  background: var(--white-background);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+#contact-a {
+  background-color: var(--primary-color) !important;
+  color: var(--font-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#contact-a:hover {
+  background-color: var(--linbackground2-color) !important;
+  color: var(--white-background) !important;
+}
+
+#cart-a,
+#authButton {
+  background-color: var(--primary-color) !important;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color-inputs);
+}
+
+#cart-a:hover,
+#authButton:hover {
+  background-color: var(--linbackground2-color) !important;
+  color: var(--white-background);
+}
